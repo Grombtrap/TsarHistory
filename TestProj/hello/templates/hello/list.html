@@ -1,0 +1,31 @@
+{% load static %}
+<!doctype html>
+<html lang="ru">
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'hello/css/main.css' %}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %} {% endblock %}</title>
+</head>
+<body>
+    <aside>
+        <img src="{% static 'main/img/icons8-home-48.png' %}" alt="Лого">
+        <span class="logo">Kvantorium86</span>
+        <h3>Навигация</h3>
+        <ul>
+            <a href="/"><li><i class="fas fa-warehouse"></i> Главная</li></a>
+            <a href="/about"><li><i class="fas fa-users-cog"></i> Про нас</li></a>
+            <a href="/contact"><li><i class="fas fa-tty"></i> Контакты</li></a>
+        </ul>
+    </aside>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+</html>
